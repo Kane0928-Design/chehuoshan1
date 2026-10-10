@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#c8afb4">
+<meta name="description" content="道昭通·扯火闪——点击闪电，看看人物和马的惊讶反应。">
+<title>道昭通｜扯火闪动态交互界面</title>
+<link rel="stylesheet" href="styles.css?v=4">
+</head>
+<body>
+<main class="phone">
+  <div class="poster-wrap">
+    <section class="poster" id="poster" aria-label="道昭通：扯火闪，昭通方言，指闪电。">
+      <svg class="layer blob blob-arc" viewBox="0 0 748 777" preserveAspectRatio="none" aria-hidden="true"><path fill="#e2cfd3" d="M72 759 C105 808 232 835 342 835 C470 835 570 807 608 759 Z"/></svg>
+      <img class="layer blob" src="assets/人物底色.png" alt="">
+      <svg class="layer scenery" viewBox="0 0 1334 1888" aria-hidden="true">
+        <svg x="280" y="747" width="423" height="126" viewBox="140 453 270 81"><image href="assets/环境背景.png" width="811" height="1193"/></svg>
+        <svg x="0" y="1445" width="1334" height="516" viewBox="0 880 811 313"><image href="assets/环境背景.png" width="811" height="1193"/></svg>
+      </svg>
+      <img class="layer logo" src="assets/左上角LOGO.png" alt="道昭通 THE ZHAOTONG WAY">
+      <div class="layer word" role="img" aria-label="扯火闪">
+        <img class="word-piece" id="wordChe" src="assets/word-che.png" alt="">
+        <img class="word-piece" id="wordHuo" src="assets/word-huo.png" alt="">
+        <img class="word-piece" id="wordShan" src="assets/word-shan.png" alt="">
+      </div>
+      <img class="layer side-copy" src="assets/左侧文字.png" alt="麦麦！开始扯火闪咯！再不找地方躲雨么要遭淋成落汤鸡咯～">
+      <img class="layer cloud cloud-main" src="assets/repairs/cloud-complete.png" alt="">
+      <img class="layer cloud cloud-left" src="assets/cloud-left.png" alt="">
+      <svg class="layer cloud cloud-edge" viewBox="35 15 77 54" aria-hidden="true"><image href="assets/cloud-small-supplied.png" width="132" height="86"/></svg>
+      <svg class="layer cloud cloud-middle" viewBox="35 15 77 54" aria-hidden="true"><image href="assets/cloud-small-supplied.png" width="132" height="86"/></svg>
+      <svg class="layer cloud cloud-right" viewBox="35 15 77 54" aria-hidden="true"><image href="assets/cloud-small-supplied.png" width="132" height="86"/></svg>
+      <div class="layer definition"><span>扯火闪：</span><p>昭通方言，指闪电</p></div>
+      <div class="layer lightning" id="lightning"><img src="assets/闪电.png" alt="从云端落下的闪电"></div>
+      <div class="layer strike-light" id="strikeLight" aria-hidden="true"></div>
+      <img class="layer character props" id="basket" src="assets/basket.png?v=2" alt="竹篮与筐中的苹果">
+      <div class="layer character apple apple-complete" id="appleTwo"><img class="apple-art" src="assets/repairs/apple-complete.png" alt="轮廓完整的散落苹果"></div>
+      <img class="layer character apple" id="appleOne" src="assets/apple-1.png?v=2" alt="散落的苹果">
+      <svg class="layer hoof-contact" viewBox="0 0 1334 1888" aria-hidden="true">
+        <g fill="#796d79" opacity=".19"><ellipse cx="790" cy="1732" rx="30" ry="7"/><ellipse cx="857" cy="1732" rx="29" ry="7"/><ellipse cx="924" cy="1728" rx="30" ry="7"/><ellipse cx="984" cy="1725" rx="25" ry="6"/></g>
+        <path d="M759 1735 Q830 1729 880 1736 M896 1734 Q961 1729 1007 1729" fill="none" stroke="#897b87" stroke-width="3" stroke-linecap="round" opacity=".46"/>
+      </svg>
+      <div class="layer character horse-motion"><div id="horse" class="character-frame"><img class="horse-art" src="assets/repairs/horse-complete.png" alt="轮廓完整、四蹄着地的受惊驮马"></div></div>
+      <div class="layer character figure-motion"><div id="figure" class="character-frame">
+        <img class="figure-art" src="assets/repairs/figure-complete.png" alt="衣袖、双腿及鞋子轮廓完整的惊讶人物">
+        <svg class="surprise-marks" viewBox="408 125 60 90" aria-hidden="true"><image href="assets/figure-no-apples.png" width="693" height="728"/></svg>
+      </div></div>
+      
+      <canvas class="layer curved-annotations" id="curvedAnnotations" width="1334" height="1888" role="img" aria-label="左侧：口技陶俑（东汉），出土于昭通水富县向家坝镇。右侧：马帮标志性行旅装备。"></canvas>
+      <svg class="layer annotations" viewBox="0 0 1334 1888" aria-hidden="true">
+        <g fill="none" stroke="#82747e" stroke-width="5" stroke-linecap="round"><path d="M 250 1158 C 271 1182 308 1165 291 1147 C 278 1133 275 1180 311 1140 L 326 1125"/><path d="M1023 1515 C1024 1545 1058 1555 1056 1539 C1054 1526 1041 1542 1057 1553 Q1078 1568 1100 1552"/></g>
+      </svg>
+      <button class="tap-area" id="posterTap" aria-label="点击海报，触发闪电与人物、马的惊吓动作"></button>
+    </section>
+  </div>
+  <div class="controls" aria-label="交互按钮区">
+    <button class="btn" id="lightningBtn"><span class="tag-holes" aria-hidden="true"></span><span class="btn-label">闪电</span></button>
+    <button class="btn" id="voiceBtn"><span class="tag-holes" aria-hidden="true"></span><span class="btn-label">方言发音</span></button>
+  </div>
+  <div class="toast" id="status" role="status" aria-live="polite"></div>
+</main>
+<script src="annotation-layout.js?v=3"></script>
+<script src="annotations.js?v=3"></script>
+<script src="app.js?v=5"></script>
+</body>
+</html>
